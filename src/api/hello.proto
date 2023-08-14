@@ -8,6 +8,8 @@ service GreetingService {
 	rpc Hello (HelloRequest) returns (HelloResponse);
 	// サーバーストリーミング
 	rpc HelloServerStream (HelloRequest) returns (stream HelloResponse);
+	// クライアントストリーミング
+	rpc HelloClientStream (stream HelloRequest) returns (HelloResponse);
 }
 
 message HelloRequest {
